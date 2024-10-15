@@ -83,7 +83,7 @@ M.parse_curl_args = function(provider, prompt_opts)
   local messages = M.parse_message(prompt_opts)
 
   return {
-    url = Utils.trim(base.endpoint, { suffix = "/" }) .. "/v1/messages",
+    url = Utils.trim(base.endpoint, { suffix = "/" }),
     proxy = base.proxy,
     insecure = base.allow_insecure,
     headers = headers,
