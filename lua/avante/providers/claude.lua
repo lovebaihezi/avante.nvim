@@ -92,7 +92,6 @@ M.parse_curl_args = function(provider, prompt_opts)
         {
           type = "text",
           text = prompt_opts.system_prompt,
-          cache_control = { type = "ephemeral" },
         },
       },
       messages = messages,
