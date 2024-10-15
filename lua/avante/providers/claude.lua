@@ -86,7 +86,7 @@ M.parse_curl_args = function(provider, prompt_opts)
     insecure = base.allow_insecure,
     headers = headers,
     body = vim.tbl_deep_extend("force", {
-      "anthropic_version": "vertex-2023-10-16",
+      "anthropic_version" = "vertex-2023-10-16",
       system = {
         {
           type = "text",
