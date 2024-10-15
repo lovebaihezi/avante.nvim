@@ -76,9 +76,8 @@ M.parse_curl_args = function(provider, prompt_opts)
   local headers = {
     ["Content-Type"] = "application/json",
     ["anthropic-version"] = "2023-06-01",
-    ["anthropic-beta"] = "prompt-caching-2024-07-31",
+    ["Authorization"] = provider.parse_api_key()
   }
-  if not P.env.is_local("claude") then headers["Authorization"] = provider.parse_api_key() end
 
   local messages = M.parse_message(prompt_opts)
 
