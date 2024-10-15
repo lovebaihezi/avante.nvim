@@ -76,7 +76,7 @@ M.parse_curl_args = function(provider, prompt_opts)
   local headers = {
     ["Content-Type"] = "application/json",
     ["anthropic-version"] = "2023-06-01",
-    ["Authorization"] = provider.parse_api_key()
+    ["Authorization"] = "Bearer " .. provider.parse_api_key()
   }
 
   local messages = M.parse_message(prompt_opts)
