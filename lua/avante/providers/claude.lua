@@ -42,7 +42,6 @@ M.parse_message = function(opts)
     table.insert(message_content, {
       type = "text",
       text = prompt_data,
-      cache_control = top_three[idx] and { type = "ephemeral" } or nil,
     })
   end
 
